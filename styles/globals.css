@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Biryani&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,9 +48,45 @@
 .container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 50vh;
+}
+
+li {
+  font-size: 16;
+  list-style-type: circle;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.animate-character
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #0099ff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 6s linear infinite;
+  display: inline-block;
+      font-size: 100px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .gradient {
@@ -79,6 +117,11 @@
 .poppins
 {
   font-family: 'Poppins', sans-serif;
+}
+
+.biryaniRegular
+{
+  font-family: 'Biryani', sans-serif;
 }
 
 @media screen and (max-width: 640px) {
